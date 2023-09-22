@@ -27,4 +27,10 @@ public class MenuController {
     public MenuListResponseDto findById(@PathVariable Integer id){
         return menuService.findById(id);
     }
+
+    @DeleteMapping("/{id}")
+    public Integer delete(@PathVariable Integer id){
+        menuService.delete(id);
+        return id;
+    }
 }
