@@ -27,7 +27,6 @@ public class MenuEntityTest {
                 .menuType(COFFEE)
                 .build();
         MenuEntity savedMenuEntity = menuRepository.save(menuEntity);
-
         Assertions.assertEquals("아메리카노",savedMenuEntity.getName() );
         Assertions.assertEquals(4000, savedMenuEntity.getPrice());
         Assertions.assertEquals(COFFEE, savedMenuEntity.getMenuType());
