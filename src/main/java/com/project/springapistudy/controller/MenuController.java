@@ -22,4 +22,9 @@ public class MenuController {
     public String update(@PathVariable Integer id, @RequestBody MenuDto requestDto){
         return menuService.update(id,requestDto);
     }
+
+    @GetMapping("/{id}")
+    public MenuListResponseDto findById(@PathVariable Integer id){
+        return menuService.findById(id);
+    }
 }
