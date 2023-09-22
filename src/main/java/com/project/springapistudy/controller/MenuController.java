@@ -33,4 +33,9 @@ public class MenuController {
         menuService.delete(id);
         return id;
     }
+
+    @GetMapping()
+    public String findAll(){
+        return "모든 메뉴 출력" + "\n"+menuService.findAllDesc();
+    }
 }
