@@ -23,6 +23,10 @@ public class MenuEntity {
     private Integer price;// 가격
     @Column()
     private MenuType menuType;// 메뉴 카테고리
-
+    public void update(String name, Integer Price, MenuType menuType){
+        this.name = name;
+        this.price = price;
+        this.menuType = menuType;
+    }
 
 }
