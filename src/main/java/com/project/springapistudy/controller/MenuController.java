@@ -18,4 +18,8 @@ public class MenuController {
     }
 
 
+    @PutMapping("/{id}")
+    public String update(@PathVariable Integer id, @RequestBody MenuDto requestDto){
+        return menuService.update(id,requestDto);
+    }
 }
