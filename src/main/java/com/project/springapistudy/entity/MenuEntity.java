@@ -1,29 +1,25 @@
 package com.project.springapistudy.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
-
+@Getter
 public class MenuEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column()
+    @Column(nullable = true)
     private String name; // 메뉴명
-    @Column()
+    @Column(nullable = true)
     private Integer price;// 가격
-    @Column()
+    @Column(nullable = true)
     private MenuType menuType;// 메뉴 카테고리
-    public void update(String name, Integer Price, MenuType menuType){
+    public void update(String name, Integer price, MenuType menuType){
         this.name = name;
         this.price = price;
         this.menuType = menuType;
